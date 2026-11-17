@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JABO ART | Tirai Bambu Yogyakarta</title>
+<meta name="description" content="Jabo Art, kerai dan tirai bambu untuk rumah, teras, gazebo, balkon, dan tempat usaha. Hubungi kami untuk pemesanan.">
+<style>
+:root{--green:#23432c;--light-green:#426b48;--gold:#d8b16c;--cream:#f7f4eb;--text:#283329;--muted:#6b756b;--border:#e1e5dd}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Arial,sans-serif;color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 15px #00000010}
+nav{min-height:75px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:26px;font-weight:900;color:var(--green)}
+.logo span,footer span{color:var(--gold)}
+.navlinks{display:flex;align-items:center;gap:22px}
+.navlinks a{font-size:14px;font-weight:bold}
+.navlinks a:hover{color:var(--light-green)}
+.menu{display:none;background:var(--green);color:#fff;padding:8px 12px;border:0;border-radius:5px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 19px;border:0;border-radius:7px;font-weight:bold;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.green{background:var(--green);color:#fff}
+.gold{background:var(--gold);color:#20271f}
+.outline{border:1px solid var(--green);color:var(--green);background:transparent}
+.hero{min-height:550px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,#172e1df0,#172e1d88),url("https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero-content{padding:85px 0}
+.eyebrow{color:#c7a05c;font-size:12px;font-weight:800;letter-spacing:3px}
+.hero h1{max-width:750px;font-size:clamp(36px,5vw,60px);line-height:1.17;margin:18px 0}
+.hero h1 span{color:var(--gold)}
+.hero p{max-width:620px;color:#e5ebe4;margin-bottom:25px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero .outline{border-color:#fff;color:#fff}
+.features{background:var(--cream);padding:27px 0}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.feature-grid strong{color:var(--green)}
+.feature-grid p{font-size:13px;color:var(--muted)}
+section{padding:75px 0}
+.section-title{max-width:700px;text-align:center;margin:0 auto 38px}
+.section-title h2{font-size:clamp(28px,4vw,40px);line-height:1.3;color:var(--green);margin:10px 0}
+.section-title p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-photo{min-height:350px;border-radius:14px;background:linear-gradient(135deg,#e8dfcd,#d7e2d2);display:flex;flex-direction:column;justify-content:center;align-items:center;color:var(--green);text-align:center;overflow:hidden}
+.about-photo span{font-size:85px}
+.about-photo strong{font-size:28px}
+.about-photo img{width:100%;height:100%;min-height:350px;object-fit:cover}
+.about-grid h2{color:var(--green);font-size:34px;line-height:1.3;margin:12px 0}
+.about-grid p{color:var(--muted);margin-bottom:15px}
+.checklist{list-style:none;margin:18px 0}
+.checklist li{margin:7px 0}
+.checklist li:before{content:"✓ ";color:var(--light-green);font-weight:bold}
+.products,.location{background:var(--cream)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 5px 22px #00000008}
+.product-image{height:190px;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#eee7d9,#d7e0d0);font-size:60px;overflow:hidden}
+.product-image img{width:100%;height:100%;object-fit:cover}
+.product-info{padding:20px}
+.product-info h3{color:var(--green);font-size:19px}
+.product-info p{color:var(--muted);font-size:14px;margin:8px 0}
+.price{color:var(--green);font-size:18px;font-weight:800;margin:12px 0}
+.product-info .btn{width:100%}
+.promo{background:var(--green);color:#fff;text-align:center}
+.promo h2{font-size:clamp(28px,4vw,40px);margin:12px 0}
+.promo p{max-width:650px;margin:0 auto 22px;color:#e0e8df}
+.form-card{max-width:800px;margin:auto;padding:30px;border:1px solid var(--border);border-radius:12px;box-shadow:0 5px 25px #00000008}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 18px}
+.group{margin-bottom:17px}
+.group label{display:block;font-weight:bold;font-size:14px;margin-bottom:6px}
+.group input,.group select,.group textarea{width:100%;padding:12px;border:1px solid #d8ded5;border-radius:7px;background:#fff;outline:none}
+.group input:focus,.group select:focus,.group textarea:focus{border-color:var(--light-green)}
+.group textarea{min-height:90px;resize:vertical}
+.full{grid-column:1/-1}
+.form-card .btn{width:100%}
+.note{color:var(--muted);font-size:12px;text-align:center;margin-top:12px}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.location-card{padding:28px;background:#fff;border-radius:12px}
+.location-card h3{font-size:25px;color:var(--green);margin-bottom:15px}
+.location-card p{margin:13px 0;overflow-wrap:anywhere}
+.location-card .btn{margin:6px 4px 6px 0}
+.map{width:100%;min-height:340px;border:0;border-radius:12px}
+footer{background:#172c1d;color:#dce5da;padding:35px 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}
+footer h2{color:#fff;margin-bottom:8px}
+footer p{font-size:13px}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:90;padding:13px 17px;background:#20b85a;color:#fff;font-weight:bold;border-radius:40px;box-shadow:0 5px 20px #0003}
+.admin-button{border:0;padding:9px 13px;border-radius:6px;background:var(--green);color:#fff;font-weight:bold}
+.modal{position:fixed;inset:0;z-index:500;background:#0009;display:flex;justify-content:center;align-items:center;padding:15px}
+.hidden{display:none!important}
+.modal-content{position:relative;width:min(750px,100%);max-height:90vh;overflow-y:auto;padding:28px;border-radius:12px;background:#fff}
+.modal-content h2,.modal-content h3{color:var(--green);margin-bottom:12px}
+.close{position:absolute;right:12px;top:8px;font-size:27px;background:none;border:0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.stat{background:var(--cream);padding:13px;border-radius:8px}
+.stat strong{display:block;color:var(--green);overflow-wrap:anywhere}
+.admin-item{padding:14px;border:1px solid var(--border);border-radius:8px;margin:10px 0;overflow-wrap:anywhere}
+.admin-item p{font-size:13px;color:var(--muted)}
+.admin-item img{width:80px;height:60px;object-fit:cover;border-radius:6px;display:block;margin:6px 0}
+.admin-item button{padding:7px 10px;border:0;border-radius:5px;margin:8px 5px 0 0;background:var(--cream)}
+.danger{background:#fbe8e8!important;color:#a51d1d}
+@media(max-width:800px){
+.menu{display:block}
+.navlinks{display:none;position:absolute;top:75px;left:0;right:0;background:#fff;padding:20px 5%;flex-direction:column;align-items:flex-start;box-shadow:0 8px 15px #0001}
+.navlinks.open{display:flex}
+.about-grid,.location-grid{grid-template-columns:1fr}
+.product-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
+@media(max-width:520px){
+section{padding:55px 0}
+.hero{min-height:490px}
+.hero h1{font-size:36px}
+.feature-grid,.product-grid,.form-grid,.stats{grid-template-columns:1fr}
+.full{grid-column:auto}
+.form-card{padding:20px}
+.footer-inner{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<header>
+<nav class="container">
+<a href="#beranda" class="logo">JABO <span>ART.</span></a>
+<button class="menu" id="menuButton">☰ MENU</button>
+<div class="navlinks" id="navlinks">
+<a href="#beranda">Beranda</a>
+<a href="#tentang">Tentang</a>
+<a href="#produk">Produk</a>
+<a href="#pesanan">Pesanan</a>
+<a href="#lokasi">Lokasi</a>
+<button class="admin-button" id="adminButton">Admin</button>
+</div>
+</nav>
+</header>
+
+<section class="hero" id="beranda">
+<div class="container hero-content">
+<span class="eyebrow">KERAJINAN BAMBU YOGYAKARTA</span>
+<h1>Percantik Hunian dengan <span>Tirai Bambu Jabo Art</span></h1>
+<p>Pilihan tirai bambu untuk rumah, teras, balkon, gazebo, warung, dan tempat usaha. Konsultasikan ukuran serta kebutuhan Anda langsung kepada kami.</p>
+<div class="actions">
+<a class="btn gold" href="#produk">Lihat Produk</a>
+<a class="btn outline" href="#pesanan">Pesan Sekarang</a>
+</div>
+</div>
+</section>
+
+<div class="features">
+<div class="container feature-grid">
+<div><strong>🎋 Nuansa Alami</strong><p>Untuk dekorasi hunian dan usaha.</p></div>
+<div><strong>📐 Konsultasi Ukuran</strong><p>Sesuaikan kebutuhan pemasangan.</p></div>
+<div><strong>💬 Pemesanan Mudah</strong><p>Hubungi admin melalui WhatsApp.</p></div>
+</div>
+</div>
+
+<section id="tentang">
+<div class="container about-grid">
+<div class="about-photo" id="aboutPhoto">
+<img src="https://cdn.pakutaso.com/shared/img/thumb/ppp_sudare_TP_V.jpg" alt="Produk Jabo Art" onerror="this.parentElement.innerHTML='<span>🎋</span><strong>JABO ART</strong><p>Spesialis Kerai Bambu</p>'">
+</div>
+<div>
+<span class="eyebrow">TENTANG KAMI</span>
+<h2>Sentuhan Alami untuk Rumah Anda</h2>
+<p>Jabo Art menyediakan pilihan kerai dan tirai bambu untuk kebutuhan rumah maupun tempat usaha.</p>
+<p>Kami membantu pelanggan mendapatkan informasi produk, ukuran, harga, dan kebutuhan pemasangan.</p>
+<ul class="checklist">
+<li>Konsultasi ukuran dan produk.</li>
+<li>Pilihan untuk rumah dan tempat usaha.</li>
+<li>Informasi harga melalui admin.</li>
+<li>Pemesanan langsung melalui WhatsApp.</li>
+</ul>
+<a class="btn green" href="#pesanan">Konsultasi Sekarang</a>
+</div>
+</div>
+</section>
+
+<section class="products" id="produk">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">KATALOG PRODUK</span>
+<h2>Produk Jabo Art</h2>
+<p>Pilih produk untuk mengetahui harga dan melakukan pemesanan.</p>
+</div>
+<div class="product-grid" id="productGrid"></div>
+</div>
+</section>
+
+<section class="promo">
+<div class="container">
+<span class="eyebrow">KONSULTASI PEMBELIAN</span>
+<h2>Butuh Tirai Bambu untuk Rumah atau Usaha?</h2>
+<p>Kirim kebutuhan ukuran, jumlah, dan lokasi pemasangan kepada admin Jabo Art.</p>
+<a class="btn gold" id="promoWA" href="#" target="_blank" rel="noopener noreferrer">💬 Hubungi WhatsApp</a>
+</div>
+</section>
+
+<section id="pesanan">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">FORM PEMESANAN</span>
+<h2>Pesan Tirai Bambu</h2>
+<p>Isi formulir berikut, pesanan langsung disiapkan di WhatsApp admin.</p>
+</div>
+<form class="form-card" id="orderForm">
+<div class="form-grid">
+<div class="group"><label for="nama">Nama lengkap *</label><input id="nama" required maxlength="100"></div>
+<div class="group"><label for="telepon">Nomor WhatsApp Anda *</label><input id="telepon" type="tel" required maxlength="25" placeholder="08xxxxxxxxxx"></div>
+<div class="group"><label for="produkSelect">Pilih produk *</label><select id="produkSelect" required><option value="">Pilih produk</option></select></div>
+<div class="group"><label for="jumlah">Jumlah unit *</label><input id="jumlah" type="number" min="1" max="10000" value="1" required></div>
+<div class="group"><label for="lebar">Lebar tirai</label><input id="lebar" placeholder="Contoh: 200 cm" maxlength="100"></div>
+<div class="group"><label for="tinggi">Tinggi tirai</label><input id="tinggi" placeholder="Contoh: 150 cm" maxlength="100"></div>
+<div class="group full"><label for="alamat">Alamat pemasangan / pengiriman</label><textarea id="alamat" maxlength="1000"></textarea></div>
+<div class="group full"><label for="catatan">Catatan tambahan</label><textarea id="catatan" maxlength="1000"></textarea></div>
+</div>
+<button class="btn green" type="submit">Kirim Pesanan ke WhatsApp</button>
+<p class="note">WhatsApp akan terbuka dengan pesan siap kirim. Tekan tombol kirim di WhatsApp untuk menyelesaikan pesanan.</p>
+</form>
+</div>
+</section>
+
+<section class="location" id="lokasi">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">LOKASI TOKO</span>
+<h2>Kunjungi Jabo Art</h2>
+<p>Buka peta untuk memeriksa lokasi dan mendapatkan petunjuk arah.</p>
+</div>
+<div class="location-grid">
+<div class="location-card">
+<h3>JABO ART</h3>
+<p><strong>Alamat:</strong><br>Jl. Gambiran No. 197, Pandeyan, Umbulharjo, Yogyakarta.</p>
+<p><strong>WhatsApp:</strong><br>0857-0046-4381</p>
+<p><strong>Instagram:</strong><br>@jabo.art_keraibambu</p>
+<a class="btn green" href="https://maps.app.goo.gl/UEh3BgSXkU72Jprn7" target="_blank" rel="noopener noreferrer">📍 Buka Google Maps</a>
+<a class="btn outline" href="https://www.instagram.com/jabo.art_keraibambu/" target="_blank" rel="noopener noreferrer">Instagram</a>
+</div>
+<iframe class="map" title="Peta lokasi Jabo Art" src="https://maps.google.com/maps?q=Kerai%20Bambu%20Jabo%20Art%20Yogyakarta&output=embed" loading="lazy"></iframe>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container footer-inner">
+<div><h2>JABO <span>ART.</span></h2><p>Tirai bambu untuk rumah dan tempat usaha.</p></div>
+<p>© <span id="year"></span> Jabo Art.</p>
+</div>
+</footer>
+
+<a href="#" id="floatingWA" class="wa-float" target="_blank" rel="noopener noreferrer">☎ Chat WhatsApp</a>
+
+<div class="modal hidden" id="loginModal">
+<div class="modal-content" style="max-width:430px">
+<button class="close" id="closeLogin">×</button>
+<h2>Login Admin</h2>
+<p class="note">Login demo lokal, tidak aman untuk website publik.</p>
+<form id="loginForm">
+<div class="group"><label for="username">Username</label><input id="username" required autocomplete="username"></div>
+<div class="group"><label for="password">Password</label><input id="password" type="password" required autocomplete="current-password"></div>
+<button class="btn green" type="submit">Masuk Dashboard</button>
+<p id="loginMessage"></p>
+</form>
+</div>
+</div>
+
+<div class="modal hidden" id="dashboardModal">
+<div class="modal-content">
+<button class="close" id="closeDashboard">×</button>
+<h2>Dashboard Jabo Art</h2>
+<p class="note">Data tersimpan pada browser ini saja, bukan database online.</p>
+<div class="stats">
+<div class="stat">Jumlah produk<strong id="statProducts">0</strong></div>
+<div class="stat">Pesanan<strong id="statOrders">0</strong></div>
+<div class="stat">Omzet estimasi<strong id="statRevenue">Rp0</strong></div>
+</div>
+<h3>Tambah Produk</h3>
+<form id="addProductForm">
+<div class="group"><label for="newName">Nama produk</label><input id="newName" required maxlength="100"></div>
+<div class="form-grid">
+<div class="group"><label for="newPrice">Harga (Rp)</label><input id="newPrice" type="number" min="0" required></div>
+<div class="group"><label for="newStock">Stok</label><input id="newStock" type="number" min="0" value="0" required></div>
+</div>
+<div class="group"><label for="newDescription">Deskripsi</label><textarea id="newDescription" required maxlength="500"></textarea></div>
+<div class="group"><label for="newImage">Foto produk</label><input id="newImage" type="file" accept="image/*"></div>
+<button class="btn green" type="submit">Tambah Produk</button>
+</form>
+<h3 style="margin-top:25px">Daftar Produk</h3>
+<div id="adminProducts"></div>
+<h3 style="margin-top:25px">Pesanan Tercatat</h3>
+<div id="adminOrders"></div>
+<button class="btn outline" id="logout" style="width:100%;margin-top:20px">Keluar</button>
+</div>
+</div>
+
+<script>
+"use strict";
+
+/* NOMOR WHATSAPP ADMIN (format internasional, tanpa + dan tanpa 0 di depan) */
+const WHATSAPP = "6285700464381";
+
+/* LOGIN DEMO. Kode ini terlihat publik, jangan pakai password penting. */
+const ADMIN_USER = "ajitriantoro";
+const ADMIN_PASS = "ajitri100";
+
+/* Versi data: naikkan angkanya agar produk bawaan terbaru menggantikan data lama di browser. */
+const KEY_PRODUCTS = "jabo_art_products_v3";
+const KEY_ORDERS = "jabo_art_single_orders";
+
+/* FOTO PRODUK: foto stok gratis (Pakutaso). Ganti dengan foto asli Anda, misalnya "foto/natural.jpg" atau lewat dashboard admin. */
+const DEFAULT_PRODUCTS = [
+  {id:"p1",name:"Tirai Bambu Natural",price:0,stock:0,image:"https://cdn.pakutaso.com/shared/img/thumb/texture201029AB_7_TP_V.jpg",description:"Tirai bambu untuk rumah dan ruang santai.",active:true},
+  {id:"p2",name:"Tirai Bambu Outdoor",price:0,stock:0,image:"https://cdn.pakutaso.com/shared/img/thumb/PPS_keidainosudare_TP_V.jpg",description:"Pilihan tirai bambu untuk teras dan gazebo.",active:true},
+  {id:"p3",name:"Tirai Bambu untuk Usaha",price:0,stock:0,image:"https://cdn.pakutaso.com/shared/img/thumb/ppp_sudare_TP_V.jpg",description:"Tirai bambu untuk warung dan tempat usaha.",active:true},
+  {id:"p4",name:"Tirai Bambu Ukuran Khusus",price:0,stock:0,image:"https://cdn.pakutaso.com/shared/img/thumb/pakutexture06210130_TP_V4.jpg",description:"Konsultasikan kebutuhan ukuran kepada admin.",active:true}
+];
+
+function loadData(key,fallback){
+  try{const v=localStorage.getItem(key);return v===null?fallback:JSON.parse(v);}catch{return fallback;}
+}
+let products = loadData(KEY_PRODUCTS,DEFAULT_PRODUCTS);
+let orders = loadData(KEY_ORDERS,[]);
+let adminLoggedIn = false;
+if(!Array.isArray(products)) products = DEFAULT_PRODUCTS;
+if(!Array.isArray(orders)) orders = [];
+
+function saveProducts(){
+  try{localStorage.setItem(KEY_PRODUCTS,JSON.stringify(products));}
+  catch{alert("Penyimpanan browser penuh. Gunakan foto yang lebih kecil.");}
+}
+function saveOrders(){
+  try{localStorage.setItem(KEY_ORDERS,JSON.stringify(orders));}catch{}
+}
+function safe(v){
+  return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function money(v){
+  return new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(Number(v)||0);
+}
+function makeId(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7);}
+function waLink(m){return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(m);}
+
+/* Hanya izinkan alamat foto yang aman (file lokal, https, atau data gambar) */
+function safeImg(src){
+  src=String(src||"");
+  return /^(https:\/\/|foto\/|\.\/|data:image\/(jpeg|png|webp);base64,)/.test(src)?src:"";
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("floatingWA").href = waLink("Halo Jabo Art, saya ingin bertanya tentang produk tirai bambu.");
+document.getElementById("promoWA").href = waLink("Halo Jabo Art, saya ingin berkonsultasi tentang tirai bambu.");
+
+/* MENU HP */
+document.getElementById("menuButton").addEventListener("click",()=>document.getElementById("navlinks").classList.toggle("open"));
+document.querySelectorAll("#navlinks a").forEach(l=>l.addEventListener("click",()=>document.getElementById("navlinks").classList.remove("open")));
+
+/* FOTO: kecilkan otomatis agar muat di penyimpanan browser */
+function readImage(file){
+  return new Promise(function(resolve){
+    if(!file) return resolve("");
+    const reader=new FileReader();
+    reader.onload=function(){
+      const img=new Image();
+      img.onload=function(){
+        const s=Math.min(1,700/img.width);
+        const c=document.createElement("canvas");
+        c.width=Math.round(img.width*s);c.height=Math.round(img.height*s);
+        c.getContext("2d").drawImage(img,0,0,c.width,c.height);
+        resolve(c.toDataURL("image/jpeg",0.75));
+      };
+      img.onerror=()=>resolve("");
+      img.src=reader.result;
+    };
+    reader.onerror=()=>resolve("");
+    reader.readAsDataURL(file);
+  });
+}
+
+/* KATALOG PRODUK */
+function renderProducts(){
+  const grid=document.getElementById("productGrid");
+  const select=document.getElementById("produkSelect");
+  grid.replaceChildren();
+  select.replaceChildren(new Option("Pilih produk",""));
+
+  products.filter(p=>p.active!==false).forEach(function(p){
+    const card=document.createElement("article");
+    card.className="product";
+    const src=safeImg(p.image);
+    card.innerHTML=
+      '<div class="product-image">'+(src?'<img src="'+safe(src)+'" alt="'+safe(p.name)+'" loading="lazy">':'🎋')+'</div>'+
+      '<div class="product-info">'+
+      '<h3>'+safe(p.name)+'</h3>'+
+      '<p>'+safe(p.description)+'</p>'+
+      '<div class="price">'+(Number(p.price)>0?money(p.price)+" / unit":"Hubungi admin untuk harga")+'</div>'+
+      '<p>Stok tercatat: '+Number(p.stock||0)+'</p>'+
+      '<button class="btn green" type="button">Pilih Produk</button>'+
+      '</div>';
+
+    const img=card.querySelector("img");
+    if(img) img.addEventListener("error",()=>{img.parentElement.textContent="🎋";});
+
+    card.querySelector("button").addEventListener("click",function(){
+      select.value=p.id;
+      document.getElementById("pesanan").scrollIntoView({behavior:"smooth"});
+    });
+
+    grid.appendChild(card);
+    select.add(new Option(p.name,p.id));
+  });
+
+  renderAdminProducts();
+  updateStats();
+}
+
+/* PEMESANAN LANGSUNG KE WHATSAPP */
+document.getElementById("orderForm").addEventListener("submit",function(e){
+  e.preventDefault();
+
+  const name=document.getElementById("nama").value.trim();
+  const phone=document.getElementById("telepon").value.trim();
+  const product=products.find(p=>p.id===document.getElementById("produkSelect").value && p.active!==false);
+  const quantity=Number(document.getElementById("jumlah").value);
+  const width=document.getElementById("lebar").value.trim();
+  const height=document.getElementById("tinggi").value.trim();
+  const address=document.getElementById("alamat").value.trim();
+  const notes=document.getElementById("catatan").value.trim();
+
+  if(!name||!phone||!product||!Number.isInteger(quantity)||quantity<1){
+    alert("Mohon lengkapi nama, nomor WhatsApp, produk, dan jumlah.");
+    return;
+  }
+
+  const order={
+    id:makeId(),name,phone,product:product.name,quantity,width,height,address,notes,
+    unitPrice:Number(product.price)||0,status:"Menunggu konfirmasi",date:new Date().toISOString()
+  };
+  orders.push(order);
+  saveOrders();
+  renderAdminOrders();
+  updateStats();
+
+  const estimate=order.unitPrice>0?money(order.unitPrice*quantity):"Menunggu konfirmasi admin";
+  const message=
+`Halo Jabo Art, saya ingin memesan tirai bambu.
+
+Nomor pesanan: ${order.id}
+Nama: ${name}
+WhatsApp pelanggan: ${phone}
+Produk: ${product.name}
+Jumlah: ${quantity} unit
+Lebar: ${width||"Belum ditentukan"}
+Tinggi: ${height||"Belum ditentukan"}
+Alamat: ${address||"Belum ditentukan"}
+Catatan: ${notes||"Tidak ada"}
+Estimasi harga: ${estimate}
+
+Mohon informasi harga, ketersediaan, dan biaya pengiriman.
+Terima kasih.`;
+
+  const url=waLink(message);
+  this.reset();
+  const w=window.open(url,"_blank");
+  if(w) w.opener=null;
+  else window.location.href=url;
+});
+
+/* MODAL ADMIN */
+const loginModal=document.getElementById("loginModal");
+const dashboardModal=document.getElementById("dashboardModal");
+
+document.getElementById("adminButton").addEventListener("click",function(){
+  if(adminLoggedIn) openDashboard(); else loginModal.classList.remove("hidden");
+});
+document.getElementById("closeLogin").addEventListener("click",()=>loginModal.classList.add("hidden"));
+document.getElementById("closeDashboard").addEventListener("click",()=>dashboardModal.classList.add("hidden"));
+
+document.getElementById("loginForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const user=document.getElementById("username").value;
+  const pass=document.getElementById("password").value;
+  if(user===ADMIN_USER && pass===ADMIN_PASS){
+    adminLoggedIn=true;
+    this.reset();
+    document.getElementById("loginMessage").textContent="";
+    loginModal.classList.add("hidden");
+    openDashboard();
+  }else{
+    document.getElementById("loginMessage").textContent="Username atau password salah.";
+  }
+});
+
+function openDashboard(){
+  if(!adminLoggedIn) return;
+  renderAdminProducts();
+  renderAdminOrders();
+  updateStats();
+  dashboardModal.classList.remove("hidden");
+}
+
+/* TAMBAH PRODUK */
+document.getElementById("addProductForm").addEventListener("submit",async function(e){
+  e.preventDefault();
+  if(!adminLoggedIn) return;
+
+  const name=document.getElementById("newName").value.trim();
+  const price=Number(document.getElementById("newPrice").value);
+  const stock=Number(document.getElementById("newStock").value);
+  const description=document.getElementById("newDescription").value.trim();
+
+  if(!name||!description||!Number.isFinite(price)||price<0||!Number.isInteger(stock)||stock<0){
+    alert("Periksa nama, harga, stok, dan deskripsi produk.");
+    return;
+  }
+
+  const image=await readImage(document.getElementById("newImage").files[0]);
+  products.push({id:makeId(),name,price,stock,description,image,active:true});
+  saveProducts();
+  this.reset();
+  document.getElementById("newStock").value=0;
+  renderProducts();
+  alert("Produk berhasil ditambahkan.");
+});
+
+/* KELOLA PRODUK */
+function renderAdminProducts(){
+  const list=document.getElementById("adminProducts");
+  if(!list) return;
+  list.replaceChildren();
+  if(!products.length){list.textContent="Belum ada produk.";return;}
+
+  products.forEach(function(p){
+    const src=safeImg(p.image);
+    const item=document.createElement("div");
+    item.className="admin-item";
+    item.innerHTML=
+      '<strong>'+safe(p.name)+'</strong>'+
+      (src?'<img src="'+safe(src)+'" alt="">':'')+
+      '<p>Harga: '+money(p.price)+' | Stok: '+Number(p.stock||0)+'</p>'+
+      '<p>'+safe(p.description)+'</p>'+
+      '<button data-action="edit">Edit</button>'+
+      '<button data-action="stock">Ubah stok</button>'+
+      '<button data-action="photo">Ganti foto</button>'+
+      '<button data-action="delete" class="danger">Hapus</button>';
+    item.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",()=>manageProduct(p.id,btn.dataset.action)));
+    list.appendChild(item);
+  });
+}
+
+function manageProduct(id,action){
+  if(!adminLoggedIn) return;
+  const p=products.find(x=>x.id===id);
+  if(!p) return;
+
+  if(action==="photo"){
+    const input=document.createElement("input");
+    input.type="file";
+    input.accept="image/*";
+    input.addEventListener("change",async function(){
+      const data=await readImage(input.files[0]);
+      if(!data) return;
+      p.image=data;
+      saveProducts();
+      renderProducts();
+    });
+    input.click();
+    return;
+  }
+
+  if(action==="edit"){
+    const name=prompt("Nama produk:",p.name);
+    if(name===null) return;
+    const priceText=prompt("Harga (angka saja):",String(p.price));
+    if(priceText===null) return;
+    const price=Number(priceText);
+    const description=prompt("Deskripsi:",p.description);
+    if(description===null) return;
+    if(!name.trim()||!Number.isFinite(price)||price<0){alert("Nama atau harga tidak valid.");return;}
+    p.name=name.trim();p.price=price;p.description=description.trim();
+  }
+
+  if(action==="stock"){
+    const value=prompt("Stok baru:",String(p.stock));
+    if(value===null) return;
+    const stock=Number(value);
+    if(!Number.isInteger(stock)||stock<0){alert("Stok harus berupa angka bulat minimal 0.");return;}
+    p.stock=stock;
+  }
+
+  if(action==="delete"){
+    if(!confirm("Hapus produk "+p.name+"?")) return;
+    products=products.filter(x=>x.id!==id);
+  }
+
+  saveProducts();
+  renderProducts();
+}
+
+/* KELOLA PESANAN */
+function renderAdminOrders(){
+  const list=document.getElementById("adminOrders");
+  if(!list) return;
+  list.replaceChildren();
+  if(!orders.length){list.textContent="Belum ada pesanan pada browser ini.";return;}
+
+  orders.slice().reverse().forEach(function(o){
+    const item=document.createElement("div");
+    item.className="admin-item";
+    item.innerHTML=
+      '<strong>'+safe(o.name)+'</strong>'+
+      '<p>ID: '+safe(o.id)+'</p>'+
+      '<p>Produk: '+safe(o.product)+' | Jumlah: '+Number(o.quantity)+'</p>'+
+      '<p>WhatsApp: '+safe(o.phone)+'</p>'+
+      '<p>Status: '+safe(o.status)+'</p>'+
+      '<p>Tanggal: '+safe(new Date(o.date).toLocaleString("id-ID"))+'</p>'+
+      '<button data-action="confirm">Konfirmasi</button>'+
+      '<button data-action="complete">Tandai selesai</button>'+
+      '<button data-action="delete" class="danger">Hapus</button>';
+    item.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",()=>manageOrder(o.id,btn.dataset.action)));
+    list.appendChild(item);
+  });
+}
+
+function manageOrder(id,action){
+  if(!adminLoggedIn) return;
+  const o=orders.find(x=>x.id===id);
+  if(!o) return;
+  if(action==="confirm") o.status="Dikonfirmasi";
+  if(action==="complete"){
+    if(!confirm("Pastikan pesanan sudah selesai dan dibayar. Lanjutkan?")) return;
+    o.status="Selesai";
+  }
+  if(action==="delete"){
+    if(!confirm("Hapus catatan pesanan ini?")) return;
+    orders=orders.filter(x=>x.id!==id);
+  }
+  saveOrders();
+  renderAdminOrders();
+  updateStats();
+}
+
+function updateStats(){
+  document.getElementById("statProducts").textContent=products.length;
+  document.getElementById("statOrders").textContent=orders.length;
+  const revenue=orders.reduce((t,o)=>t+(o.status==="Selesai"?(Number(o.unitPrice)||0)*(Number(o.quantity)||0):0),0);
+  document.getElementById("statRevenue").textContent=money(revenue);
+}
+
+document.getElementById("logout").addEventListener("click",function(){
+  adminLoggedIn=false;
+  dashboardModal.classList.add("hidden");
+});
+
+renderProducts();
+renderAdminOrders();
+updateStats();
+</script>
+</body>
+</html>
